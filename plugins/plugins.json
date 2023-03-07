@@ -3,8 +3,8 @@
         {
             "name": "test",
             "lang": "Indonesian",
-            "iconUrl": "https://github.com/nyagami/LNReader-plugins/blob/master/icons/id/test.png",
-            "url": "https://github.com/nyagami/LNReader-plugins/blob/master/plugins/id/test.js",
+            "iconUrl": "https://github.com/nyagami/LNReader-plugins/blob/master/icons/indonesian/test.png",
+            "url": "https://github.com/nyagami/LNReader-plugins/blob/master/plugins/indonesian/test.js",
             "description": "This is description for plugin"
         }
     ],
