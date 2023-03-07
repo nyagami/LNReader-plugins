@@ -4,7 +4,7 @@
             "id":"Bahasa Indonesia - 1",
             "name": "test",
             "version": "1.0.0",
-            "iconUrl": "https://raw.githubusercontent.com/nyagami/LNReader-plugins/master/icons/indonesian/test.png",
+            "iconUrl": "https://github.com/nyagami/LNReader-plugins/blob/master/icons/indonesian/test.png?raw=true",
             "url": "https://github.com/nyagami/LNReader-plugins/blob/master/plugins/indonesian/test.js",
             "description": "This is description for plugin"
         }
