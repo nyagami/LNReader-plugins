@@ -1,5 +1,5 @@
 const cheerio = require('cheerio');
-const status = require('../../src/scraperStatus');
+const status = require('../../src/pluginStatus');
 const languages = require('../../src/languages');
 
 const sourceId = 81;
