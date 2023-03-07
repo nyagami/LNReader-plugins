@@ -1,6 +1,7 @@
 {
     "Bahasa Indonesia": [
-        {
+        {   
+            "id":"Bahasa Indonesia - 1",
             "name": "test",
             "version": "1.0.0",
             "iconUrl": "https://github.com/nyagami/LNReader-plugins/blob/master/icons/indonesian/test.png",

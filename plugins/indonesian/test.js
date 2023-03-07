@@ -190,6 +190,7 @@ const valid = async () => {
 }
 
 module.exports = {
+    id: languages.Indonesian + ' - 1',
     name: 'test',
     version: '1.0.0',
     site: baseUrl,
