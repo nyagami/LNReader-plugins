@@ -192,6 +192,7 @@ module.exports = {
     name: 'test',
     version: '1.0.0',
     site: baseUrl,
+    lang: 'Indonesian',
     valid: valid,
     fetchImage: fetchImage,
     popularNovels,
