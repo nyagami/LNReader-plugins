@@ -1,5 +1,6 @@
 const cheerio = require('cheerio');
 const status = require('../../src/scraperStatus');
+const languages = require('../../src/languages');
 
 const sourceId = 81;
 const baseUrl = 'https://id.mtlnovel.com';
@@ -192,7 +193,7 @@ module.exports = {
     name: 'test',
     version: '1.0.0',
     site: baseUrl,
-    lang: 'Indonesian',
+    lang: languages.Indonesian,
     valid: valid,
     fetchImage: fetchImage,
     popularNovels,
