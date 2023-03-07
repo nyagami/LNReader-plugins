@@ -2,15 +2,10 @@
     "Indonesian": [
         {
             "name": "test",
+            "version": "1.0.0",
             "iconUrl": "https://github.com/nyagami/LNReader-plugins/blob/master/icons/indonesian/test.png",
             "url": "https://github.com/nyagami/LNReader-plugins/blob/master/plugins/indonesian/test.js",
             "description": "This is description for plugin"
         }
-    ],
-    "English": [
-
-    ],
-    "Vietnamese": [
-
     ]
 }
