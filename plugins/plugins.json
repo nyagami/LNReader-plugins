@@ -1,0 +1,17 @@
+{
+    "id": [
+        {
+            "name": "test",
+            "lang": "English",
+            "iconUrl": "https://github.com/nyagami/LNReader-plugins/blob/master/icons/id/test.png",
+            "url": "https://github.com/nyagami/LNReader-plugins/blob/master/plugins/id/test.js",
+            "description": "This is description for plugin"
+        }
+    ],
+    "en": [
+
+    ],
+    "vi": [
+        
+    ]
+}
