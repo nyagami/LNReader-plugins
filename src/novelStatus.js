@@ -1,5 +1,9 @@
 module.exports = {
-    ONGOING: 'Ongoing',
-    COMPLETED: 'Completed',
-    UNKNOWN: 'Unknown',
+    Unknown: 'Unknown',
+    Ongoing: 'Ongoing',
+    Completed: 'Completed',
+    Licensed: 'Licensed',
+    PublishingFinished: 'Publishing Finished',
+    Cancelled: 'Cancelled',
+    OnHiatus: 'On Hiatus',
 };
