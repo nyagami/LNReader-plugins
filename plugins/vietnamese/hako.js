@@ -72,7 +72,7 @@ const parseNovelAndChapters = async (novelUrl) => {
   const background = loadedCheerio('.series-cover > .a6-ratio > div').attr(
     'style',
   );
-  const novelCover = background?.substring(
+  const novelCover = background.substring(
     background.indexOf('http'),
     background.length - 2,
   );
@@ -121,7 +121,7 @@ const parseNovelAndChapters = async (novelUrl) => {
         chapterUrl,
       };
 
-      novel.chapters?.push(chapter);
+      novel.chapters.push(chapter);
     }
   });
 
