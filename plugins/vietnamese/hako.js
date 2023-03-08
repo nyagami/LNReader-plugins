@@ -1,5 +1,5 @@
 const cheerio = require('cheerio')
-const isUrlAbsolute = require('../../src/isAbsoluteUrl');
+const isUrlAbsolute = (any) => true ;
 const languages = require('../../src/languages');
 const status = require('../../src/pluginStatus');
 
