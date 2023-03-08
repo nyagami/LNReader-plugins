@@ -1,3 +1,4 @@
+'use strict';
 const cheerio = require('cheerio');
 const isUrlAbsolute = require('../../src/isAbsoluteUrl');
 const languages = require('../../src/languages');
@@ -150,7 +151,7 @@ const parseChapter = async (novelUrl, chapterUrl) => {
 };
 
 const searchNovels = async (searchTerm) => {
-  const url = baseUrl+ '/tim-kiem?keywords=' + searchTerm;
+  const url = baseUrl + '/tim-kiem?keywords=' + searchTerm;
 
   const result = await fetch(url);
   const body = await result.text();
@@ -197,16 +198,16 @@ const valid = async () => {
 }
 
 module.exports = {
-    id: 'Tiếng Việt - 1',
-    name: 'Hako',
-    version: '1.0.1',
-    site: baseUrl,
-    lang: languages.Vietnamese,
-    description: 'This is description for plugin',
-    valid,
-    fetchImage,
-    popularNovels,
-    parseNovelAndChapters,
-    parseChapter,
-    searchNovels,
+  id: 'Tiếng Việt - 1',
+  name: 'Hako',
+  version: '1.0.1',
+  site: baseUrl,
+  lang: languages.Vietnamese,
+  description: 'This is description for plugin',
+  valid,
+  fetchImage,
+  popularNovels,
+  parseNovelAndChapters,
+  parseChapter,
+  searchNovels,
 };
