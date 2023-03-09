@@ -199,7 +199,7 @@ const valid = async () => {
 module.exports = {
   id: 'Tiếng Việt - 1',
   name: 'Hako',
-  version: '1.0.1',
+  version: '1.0.2',
   site: baseUrl,
   lang: languages.Vietnamese,
   description: 'This is description for plugin',
