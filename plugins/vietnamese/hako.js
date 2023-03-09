@@ -19,29 +19,29 @@ const popularNovels = async (page) => {
   const novels = [];
 
   loadedCheerio('main.row > .thumb-item-flow').each(function () {
-    let novelUrl = loadedCheerio(this)
+    let url = loadedCheerio(this)
       .find('div.thumb_attr.series-title > a')
       .attr('href');
 
-    if (novelUrl && !isUrlAbsolute(novelUrl)) {
-      novelUrl = baseUrl + novelUrl;
+    if (url && !isUrlAbsolute(url)) {
+      url = baseUrl + url;
     }
 
-    if (novelUrl) {
-      const novelName = loadedCheerio(this).find('.series-title').text().trim();
-      let novelCover = loadedCheerio(this)
+    if (url) {
+      const name = loadedCheerio(this).find('.series-title').text().trim();
+      let cover = loadedCheerio(this)
         .find('.img-in-ratio')
         .attr('data-bg');
 
-      if (novelCover && !isUrlAbsolute(novelCover)) {
-        novelCover = baseUrl + novelCover;
+      if (cover && !isUrlAbsolute(cover)) {
+        cover = baseUrl + cover;
       }
 
       const novel = {
-        sourceId,
-        novelUrl,
-        novelName,
-        novelCover,
+        id,
+        url,
+        name,
+        cover,
       };
 
       novels.push(novel);
@@ -63,24 +63,23 @@ const parseNovelAndChapters = async (novelUrl) => {
     sourceId,
     sourceName,
     url: novelUrl,
-    novelUrl,
     chapters: [],
   };
 
-  novel.novelName = loadedCheerio('.series-name').text();
+  novel.name = loadedCheerio('.series-name').text();
 
   const background = loadedCheerio('.series-cover > .a6-ratio > div').attr(
     'style',
   );
-  const novelCover = background.substring(
+  const cover = background.substring(
     background.indexOf('http'),
     background.length - 2,
   );
 
-  novel.novelCover = novelCover
-    ? isUrlAbsolute(novelCover)
-      ? novelCover
-      : baseUrl + novelCover
+  novel.cover = cover
+    ? isUrlAbsolute(cover)
+      ? cover
+      : baseUrl + cover
     : undefined;
 
   novel.summary = loadedCheerio('.summary-content').text().trim();
@@ -91,7 +90,7 @@ const parseNovelAndChapters = async (novelUrl) => {
     .text()
     .trim();
 
-  novel.genre = loadedCheerio('.series-gernes')
+  novel.genres = loadedCheerio('.series-gernes')
     .text()
     .trim()
 
@@ -116,9 +115,9 @@ const parseNovelAndChapters = async (novelUrl) => {
       const releaseDate = loadedCheerio(this).find('.chapter-time').text();
 
       const chapter = {
-        chapterName,
-        releaseDate,
-        chapterUrl,
+        name: chapterName,
+        releaseTime: releaseDate,
+        url: chapterUrl,
       };
 
       novel.chapters.push(chapter);
@@ -142,9 +141,9 @@ const parseChapter = async (novelUrl, chapterUrl) => {
   const chapter = {
     sourceId,
     novelUrl,
-    chapterUrl,
-    chapterName,
-    chapterText,
+    url: chapterUrl,
+    name: chapterName,
+    chapterText: chapterText,
   };
 
   return chapter;
@@ -171,19 +170,19 @@ const searchNovels = async (searchTerm) => {
 
     if (novelUrl) {
       const novelName = loadedCheerio(this).find('.series-title').text();
-      let novelCover = loadedCheerio(this)
+      let cover = loadedCheerio(this)
         .find('.img-in-ratio')
         .attr('data-bg');
 
-      if (novelCover && !isUrlAbsolute(novelCover)) {
-        novelCover = baseUrl + novelCover;
+      if (cover && !isUrlAbsolute(cover)) {
+        cover = baseUrl + cover;
       }
 
       novels.push({
         sourceId,
-        novelUrl,
-        novelName,
-        novelCover,
+        url: novelUrl,
+        name: novelName,
+        cover,
       });
     }
   });
