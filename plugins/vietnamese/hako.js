@@ -38,6 +38,7 @@ const popularNovels = async (page) => {
       }
 
       const novel = {
+        id,
         url,
         name,
         cover,
@@ -59,6 +60,7 @@ const parseNovelAndChapters = async (novelUrl) => {
   let loadedCheerio = cheerio.load(body);
 
   const novel = {
+    sourceId,
     sourceName,
     url: novelUrl,
     chapters: [],
@@ -197,7 +199,7 @@ const valid = async () => {
 module.exports = {
   id: 'Tiếng Việt - 1',
   name: 'Hako',
-  version: '1.0.3',
+  version: '1.0.2',
   site: baseUrl,
   lang: languages.Vietnamese,
   description: 'This is description for plugin',
