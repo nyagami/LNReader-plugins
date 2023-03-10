@@ -32,16 +32,15 @@ const popularNovels = async page => {
     novelUrl = novelUrl.replace('https://id.mtlnovel.com/', '');
 
     const novel = {
-      sourceId,
-      novelUrl,
-      novelName,
-      novelCover,
+      url: novelUrl,
+      name: novelName,
+      cover: novelCover,
     };
 
     novels.push(novel);
   });
 
-  return { novels };
+  return novels;
 };
 
 const parseNovelAndChapters = async novelUrl => {
@@ -62,15 +61,12 @@ const parseNovelAndChapters = async novelUrl => {
   let loadedCheerio = cheerio.load(body);
 
   let novel = {
-    sourceId,
-    sourceName: 'MTLNovel (Id)',
-    url,
-    novelUrl,
+    url: novelUrl,
   };
 
-  novel.novelName = loadedCheerio('h1.entry-title').text();
+  novel.name = loadedCheerio('h1.entry-title').text();
 
-  novel.novelCover = loadedCheerio('.nov-head > amp-img').attr('src');
+  novel.cover = loadedCheerio('.nov-head > amp-img').attr('src');
 
   novel.summary = loadedCheerio('div.desc > h2').next().text();
 
@@ -90,7 +86,7 @@ const parseNovelAndChapters = async novelUrl => {
     .text()
     .replace('Status:', '');
 
-  novel.genre = loadedCheerio('td')
+  novel.genres = loadedCheerio('td')
     .filter(function () {
       return loadedCheerio(this).prev().text().trim() === 'Genre';
     })
@@ -121,9 +117,9 @@ const parseNovelAndChapters = async novelUrl => {
         );
 
         novelChapters.push({
-          chapterUrl,
-          chapterName,
-          releaseDate,
+          url: chapterUrl,
+          name: chapterName,
+          releaseTime: releaseDate,
         });
       });
     return novelChapters.reverse();
@@ -152,7 +148,7 @@ const parseChapter = async (novelUrl, chapterUrl) => {
     chapterText,
   };
 
-  return chapter;
+  return chapterText;
 };
 
 const searchNovels = async searchTerm => {
@@ -192,7 +188,7 @@ const valid = async () => {
 module.exports = {
     id: languages.English + ' - 1',
     name: 'yayaya',
-    version: '1.0.0',
+    version: '1.0.1',
     site: baseUrl,
     lang: languages.Indonesian,
     description: 'This is description for plugin',
