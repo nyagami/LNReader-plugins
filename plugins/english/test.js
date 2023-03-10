@@ -188,9 +188,9 @@ const valid = async () => {
 module.exports = {
     id: languages.English + ' - 1',
     name: 'yayaya',
-    version: '1.0.1',
+    version: '1.0.2',
     site: baseUrl,
-    lang: languages.Indonesian,
+    lang: languages.English,
     description: 'This is description for plugin',
     valid: valid,
     fetchImage: fetchImage,
