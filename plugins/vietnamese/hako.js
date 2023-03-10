@@ -181,9 +181,9 @@ const searchNovels = async (searchTerm) => {
 
       novels.push({
         sourceId,
-        novelUrl,
-        novelName,
-        novelCover,
+        url: novelUrl,
+        name: novelName,
+        cover: novelCover,
       });
     }
   });
