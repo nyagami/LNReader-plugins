@@ -38,10 +38,9 @@ const popularNovels = async (page) => {
       }
 
       const novel = {
-        sourceId,
-        novelUrl,
-        novelName,
-        novelCover,
+        url: novelUrl,
+        name: novelName,
+        cover: novelCover,
       };
 
       novels.push(novel);
@@ -180,7 +179,6 @@ const searchNovels = async (searchTerm) => {
       }
 
       novels.push({
-        sourceId,
         url: novelUrl,
         name: novelName,
         cover: novelCover,
@@ -200,7 +198,7 @@ const valid = async () => {
 module.exports = {
   id: 'Tiếng Việt - 1',
   name: 'Hako',
-  version: '1.0.7',
+  version: '1.0.8',
   site: baseUrl,
   lang: languages.Vietnamese,
   description: 'This is description for plugin',
