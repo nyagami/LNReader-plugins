@@ -59,14 +59,11 @@ const parseNovelAndChapters = async (novelUrl) => {
   let loadedCheerio = cheerio.load(body);
 
   const novel = {
-    sourceId,
-    sourceName,
     url: novelUrl,
-    novelUrl,
     chapters: [],
   };
 
-  novel.novelName = loadedCheerio('.series-name').text();
+  novel.name = loadedCheerio('.series-name').text();
 
   const background = loadedCheerio('.series-cover > .a6-ratio > div').attr(
     'style',
@@ -76,7 +73,7 @@ const parseNovelAndChapters = async (novelUrl) => {
     background.length - 2,
   );
 
-  novel.novelCover = novelCover
+  novel.cover = novelCover
     ? isUrlAbsolute(novelCover)
       ? novelCover
       : baseUrl + novelCover
@@ -115,9 +112,9 @@ const parseNovelAndChapters = async (novelUrl) => {
       const releaseDate = loadedCheerio(this).find('.chapter-time').text();
 
       const chapter = {
-        chapterName,
-        releaseDate,
-        chapterUrl,
+        name: chapterName,
+        releaseTime: releaseDate,
+        url: chapterUrl,
       };
 
       novel.chapters.push(chapter);
@@ -198,7 +195,7 @@ const valid = async () => {
 module.exports = {
   id: 'Tiếng Việt - 1',
   name: 'Hako',
-  version: '1.0.8',
+  version: '1.0.9',
   site: baseUrl,
   lang: languages.Vietnamese,
   description: 'This is description for plugin',
