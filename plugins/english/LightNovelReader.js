@@ -49,7 +49,7 @@ const popularNovels = async (page) => {
     },
   );
 
-  return { novels };
+  return novels;
 };
 
 const parseNovelAndChapters = async (novelUrl) => {
@@ -171,7 +171,7 @@ const valid = async () => {
 module.exports = {
     id: languages.English + ' - 2',
     name: 'Absolute Url',
-    version: '1.0.0',
+    version: '1.0.1',
     site: baseUrl,
     lang: languages.English,
     description: 'This is description for plugin',
