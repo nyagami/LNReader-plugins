@@ -6,7 +6,7 @@
             "lang":"English",
             "version":"1.0.2",
             "iconUrl":"https://github.com/nyagami/LNReader-plugins/blob/master/icons/indonesian/test.png?raw=true",
-            "url":"https://raw.githubusercontent.com/nyagami/LNReader-plugins/master/plugins/english/test.js",
+            "url":"https://raw.githubusercontent.com/nyagami/LNReader-plugins/master/plugins/english/test.js?newtest=true",
             "description": "This is description for plugin"
         },
         {
@@ -15,7 +15,7 @@
             "lang":"English",
             "version":"1.0.1",
             "iconUrl":"https://github.com/nyagami/LNReader-plugins/blob/master/icons/english/painful.png?raw=true",
-            "url":"https://raw.githubusercontent.com/nyagami/LNReader-plugins/master/plugins/english/LightNovelReader.js",
+            "url":"https://raw.githubusercontent.com/nyagami/LNReader-plugins/master/plugins/english/LightNovelReader.js?newtest=true",
             "description": "This is description for plugin"
         }
     ],
@@ -26,7 +26,7 @@
             "lang": "Bahasa Indonesia",
             "version": "1.0.0",
             "iconUrl": "https://github.com/nyagami/LNReader-plugins/blob/master/icons/indonesian/test.png?raw=true",
-            "url": "https://raw.githubusercontent.com/nyagami/LNReader-plugins/master/plugins/indonesian/test.js",
+            "url": "https://raw.githubusercontent.com/nyagami/LNReader-plugins/master/plugins/indonesian/test.js?newtest=true",
             "description": "This is description for plugin"
         }
     ],
@@ -37,7 +37,7 @@
             "lang": "Tiếng Việt",
             "version": "1.0.9",
             "iconUrl": "https://github.com/nyagami/LNReader-plugins/blob/master/icons/vietnamese/chie_panik.png?raw=true",
-            "url": "https://raw.githubusercontent.com/nyagami/LNReader-plugins/master/plugins/vietnamese/hako.js",
+            "url": "https://raw.githubusercontent.com/nyagami/LNReader-plugins/master/plugins/vietnamese/hako.js?newtest=true",
             "description": "This is description for plugin"
         }
     ]
