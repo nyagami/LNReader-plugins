@@ -8,7 +8,7 @@ const sourceName = 'LightNovelReader';
 const baseUrl = 'https://lightnovelreader.org';
 
 const popularNovels = async (page) => {
-  const url = baseUrl + '/ranking/top-rated/${page}/' + page;
+  const url = baseUrl + '/ranking/top-rated/' + page;
 
   const result = await fetch(url);
   const body = await result.text();
@@ -171,7 +171,7 @@ const valid = async () => {
 module.exports = {
     id: languages.English + ' - 2',
     name: 'Absolute Url',
-    version: '1.0.2',
+    version: '1.0.3',
     site: baseUrl,
     lang: languages.English,
     description: 'This is description for plugin',
