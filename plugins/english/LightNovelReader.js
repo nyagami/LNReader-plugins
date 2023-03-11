@@ -171,7 +171,7 @@ const valid = async () => {
 module.exports = {
     id: languages.English + ' - 2',
     name: 'Absolute Url',
-    version: '1.0.1',
+    version: '1.0.2',
     site: baseUrl,
     lang: languages.English,
     description: 'This is description for plugin',
