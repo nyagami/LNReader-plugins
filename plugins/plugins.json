@@ -8,6 +8,15 @@
             "iconUrl":"https://github.com/nyagami/LNReader-plugins/blob/master/icons/indonesian/test.png?raw=true",
             "url":"https://raw.githubusercontent.com/nyagami/LNReader-plugins/master/plugins/english/test.js",
             "description": "This is description for plugin"
+        },
+        {
+            "id":"English - 2",
+            "name":"Absolute Url",
+            "lang":"English",
+            "version":"1.0.0",
+            "iconUrl":"https://github.com/nyagami/LNReader-plugins/blob/master/icons/english/painful.png?raw=true",
+            "url":"https://raw.githubusercontent.com/nyagami/LNReader-plugins/master/plugins/english/LightNovelReader.js",
+            "description": "This is description for plugin"
         }
     ],
     "Bahasa Indonesia": [
