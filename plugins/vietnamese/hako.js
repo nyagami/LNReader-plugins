@@ -4,11 +4,7 @@ const languages = require('@libs/languages');
 const status = require('@libs/pluginStatus');
 
 const sourceId = 115;
-const sourceName = 'HakoLightNovel';
 const baseUrl = 'https://ln.hako.vn';
-const header = {
-  'User-Agent': 'Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.5359.128 Mobile Safari/537.36',
-};
 
 const popularNovels = async (page) => {
   const url = baseUrl + '/danh-sach?truyendich=1&sapxep=topthang&page=' + page;
@@ -197,7 +193,7 @@ const valid = async () => {
 module.exports = {
   id: 'Tiếng Việt - 1',
   name: 'Hako',
-  version: '1.0.12',
+  version: '1.0.13',
   site: baseUrl,
   lang: languages.Vietnamese,
   description: 'This is description for plugin',
