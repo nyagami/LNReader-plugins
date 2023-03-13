@@ -18,7 +18,6 @@
   "_moduleAliases": {
     "@root": ".",
     "@libs": "./libs",
-    "@icons": "./icons",
     "@plugins": "./plugins"
   }
 }
