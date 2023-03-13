@@ -8,7 +8,6 @@ const baseUrl = 'https://ln.hako.vn';
 
 const popularNovels = async (page) => {
   const url = baseUrl + '/danh-sach?truyendich=1&sapxep=topthang&page=' + page;
-  fetch(url);
   const result = await fetch(url);
   const body = await result.text();
 
@@ -50,7 +49,6 @@ const popularNovels = async (page) => {
 
 const parseNovelAndChapters = async (novelUrl) => {
   const url = novelUrl;
-  fetch(url);
   const result = await fetch(url);
   const body = await result.text();
 
@@ -124,7 +122,6 @@ const parseNovelAndChapters = async (novelUrl) => {
 
 const parseChapter = async (novelUrl, chapterUrl) => {
   const url = chapterUrl;
-  fetch(url);
   const result = await fetch(url);
   const body = await result.text();
 
@@ -146,7 +143,6 @@ const parseChapter = async (novelUrl, chapterUrl) => {
 
 const searchNovels = async (searchTerm) => {
   const url = baseUrl + '/tim-kiem?keywords=' + searchTerm;
-  fetch(url);
   const result = await fetch(url);
   const body = await result.text();
 
@@ -193,7 +189,7 @@ const valid = async () => {
 module.exports = {
   id: 'Tiếng Việt - 1',
   name: 'Hako',
-  version: '1.0.14',
+  version: '1.0.15',
   site: baseUrl,
   lang: languages.Vietnamese,
   description: 'This is description for plugin',

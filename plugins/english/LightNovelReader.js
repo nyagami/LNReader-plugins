@@ -9,7 +9,6 @@ const baseUrl = 'https://lightnovelreader.org';
 
 const popularNovels = async (page) => {
   const url = baseUrl + '/ranking/top-rated/' + page;
-  fetch(url);
 
   const result = await fetch(url);
   const body = await result.text();
@@ -55,7 +54,6 @@ const popularNovels = async (page) => {
 
 const parseNovelAndChapters = async (novelUrl) => {
   const url = novelUrl;
-  fetch(url);
   const result = await fetch(url);
   const body = await result.text();
 
@@ -126,7 +124,6 @@ const parseNovelAndChapters = async (novelUrl) => {
 
 const parseChapter = async (chapterUrl) => {
   const url = chapterUrl;
-  fetch(url);
   const result = await fetch(url);
   const body = await result.text();
 
@@ -141,7 +138,6 @@ const parseChapter = async (chapterUrl) => {
 
 const searchNovels = async (searchTerm) => {
   const url = baseUrl + '/search/autocomplete?dataType=json&query=' + searchTerm;
-  fetch(url);
   const result = await fetch(url, { method: 'POST' });
   const body = await result.json();
   const data = body.results;
@@ -172,7 +168,7 @@ const valid = async () => {
 module.exports = {
     id: languages.English + ' - 2',
     name: 'Absolute Url',
-    version: '1.0.6',
+    version: '1.0.7',
     site: baseUrl,
     lang: languages.English,
     description: 'This is description for plugin',
