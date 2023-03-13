@@ -13,7 +13,7 @@
             "id":"English - 2",
             "name":"Absolute Url",
             "lang":"English",
-            "version":"1.0.3",
+            "version":"1.0.4",
             "iconUrl":"https://github.com/nyagami/LNReader-plugins/blob/master/icons/english/painful.png?raw=true",
             "url":"https://raw.githubusercontent.com/nyagami/LNReader-plugins/master/plugins/english/LightNovelReader.js?newtest=true",
             "description": "This is description for plugin"
