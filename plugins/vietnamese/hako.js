@@ -1,8 +1,8 @@
-'use strict';
 const cheerio = require('cheerio');
-const isUrlAbsolute = require('../../src/isAbsoluteUrl');
-const languages = require('../../src/languages');
-const status = require('../../src/pluginStatus');
+const isUrlAbsolute = require('@libs/isAbsoluteUrl');
+const languages = require('@libs/languages');
+const status = require('@libs/pluginStatus');
+const axios = require('axios');
 
 const sourceId = 115;
 const sourceName = 'HakoLightNovel';
@@ -11,8 +11,8 @@ const baseUrl = 'https://ln.hako.vn';
 const popularNovels = async (page) => {
   const url = baseUrl + '/danh-sach?truyendich=1&sapxep=topthang&page=' + page;
 
-  const result = await fetch(url);
-  const body = await result.text();
+  const result = await axios.get(url);
+  const body = result.data;
 
   const loadedCheerio = cheerio.load(body);
 
@@ -53,8 +53,8 @@ const popularNovels = async (page) => {
 const parseNovelAndChapters = async (novelUrl) => {
   const url = novelUrl;
 
-  const result = await fetch(url);
-  const body = await result.text();
+  const result = await axios.get(url);
+  const body = await result.data;
 
   let loadedCheerio = cheerio.load(body);
 
@@ -127,8 +127,8 @@ const parseNovelAndChapters = async (novelUrl) => {
 const parseChapter = async (novelUrl, chapterUrl) => {
   const url = chapterUrl;
 
-  const result = await fetch(url);
-  const body = await result.text();
+  const result = await axios.get(url);
+  const body = await result.data;
 
   const loadedCheerio = cheerio.load(body);
 
@@ -149,8 +149,8 @@ const parseChapter = async (novelUrl, chapterUrl) => {
 const searchNovels = async (searchTerm) => {
   const url = baseUrl + '/tim-kiem?keywords=' + searchTerm;
 
-  const result = await fetch(url);
-  const body = await result.text();
+  const result = await axios.get(url);
+  const body = await result.data;
 
   const loadedCheerio = cheerio.load(body);
 
