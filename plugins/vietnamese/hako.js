@@ -7,11 +7,14 @@ const axios = require('axios');
 const sourceId = 115;
 const sourceName = 'HakoLightNovel';
 const baseUrl = 'https://ln.hako.vn';
+const header = {
+  'User-Agent': 'Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.5359.128 Mobile Safari/537.36',
+};
 
 const popularNovels = async (page) => {
   const url = baseUrl + '/danh-sach?truyendich=1&sapxep=topthang&page=' + page;
 
-  const result = await axios.get(url);
+  const result = await axios.get(url, {header: header});
   const body = result.data;
 
   const loadedCheerio = cheerio.load(body);
@@ -195,7 +198,7 @@ const valid = async () => {
 module.exports = {
   id: 'Tiếng Việt - 1',
   name: 'Hako',
-  version: '1.0.10',
+  version: '1.0.11',
   site: baseUrl,
   lang: languages.Vietnamese,
   description: 'This is description for plugin',
