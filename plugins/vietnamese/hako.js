@@ -10,7 +10,7 @@ const popularNovels = async (page) => {
   const url = baseUrl + '/danh-sach?truyendich=1&sapxep=topthang&page=' + page;
   fetch(url);
   const result = await fetch(url);
-  const body = result.text();
+  const body = await result.text();
 
   const loadedCheerio = cheerio.load(body);
 
@@ -193,7 +193,7 @@ const valid = async () => {
 module.exports = {
   id: 'Tiếng Việt - 1',
   name: 'Hako',
-  version: '1.0.13',
+  version: '1.0.14',
   site: baseUrl,
   lang: languages.Vietnamese,
   description: 'This is description for plugin',

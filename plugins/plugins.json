@@ -35,7 +35,7 @@
             "id":"Tiếng Việt - 1",
             "name": "Hako.re",
             "lang": "Tiếng Việt",
-            "version": "1.0.13",
+            "version": "1.0.14",
             "iconUrl": "https://github.com/nyagami/LNReader-plugins/blob/master/icons/vietnamese/chie_panik.png?raw=true",
             "url": "https://raw.githubusercontent.com/nyagami/LNReader-plugins/master/plugins/vietnamese/hako.js?newtest=true",
             "description": "This is description for plugin"
