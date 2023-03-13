@@ -1,7 +1,7 @@
 const cheerio = require('cheerio');
-const languages = require('@src/languages');
-const status = require('@src/pluginStatus');
-const isUrlAbsolute = require('@src/isAbsoluteUrl');
+const languages = require('@libs/languages');
+const status = require('@libs/pluginStatus');
+const isUrlAbsolute = require('@libs/isAbsoluteUrl');
 
 const sourceId = 114;
 const sourceName = 'LightNovelReader';
@@ -171,7 +171,7 @@ const valid = async () => {
 module.exports = {
     id: languages.English + ' - 2',
     name: 'Absolute Url',
-    version: '1.0.4',
+    version: '1.0.5',
     site: baseUrl,
     lang: languages.English,
     description: 'This is description for plugin',
